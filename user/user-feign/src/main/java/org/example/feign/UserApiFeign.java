@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author LXZ 2024/11/19 15:54
  */
-@FeignClient(value = "user-api" , contextId = "UserApiFeign", path = "/user/")
+@FeignClient(name = "user-service" , url = "http://localhost:8081")
 public interface UserApiFeign {
 
 
