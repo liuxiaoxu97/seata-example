@@ -1,0 +1,34 @@
+package org.example.order.api;
+
+import org.example.feifn.OrderApiFeign;
+import org.example.feifn.params.SubmitParam;
+import org.example.order.server.OrderService;
+import org.example.response.ResponseModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+/**
+ *
+ * 订单
+ *
+ * @author LXZ 2025/11/24 17:16
+ */
+@RestController
+@RequestMapping("/order")
+public class OrderApi implements OrderApiFeign {
+
+    @Autowired
+    private OrderService orderService;
+
+    /**
+     * 下单接口
+     *
+     * @param param 下单参数
+     */
+    @Override
+    @RequestMapping(consumes = "/submit", method = RequestMethod.POST)
+    public ResponseModel<Boolean> submit(@RequestBody SubmitParam param) {
+        orderService.submit(param);
+        return ResponseModel.success(true);
+    }
+}

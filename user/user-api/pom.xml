@@ -5,16 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>seata-example</artifactId>
+        <artifactId>user</artifactId>
         <version>1.0</version>
     </parent>
 
-    <artifactId>seata-server</artifactId>
+    <artifactId>user-api</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <user_feign.version>1.0</user_feign.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>user-feign</artifactId>
+            <version>${user_feign.version}</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

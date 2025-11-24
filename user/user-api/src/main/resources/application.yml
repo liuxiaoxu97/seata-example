@@ -1,0 +1,34 @@
+server:
+  port: 7101
+
+gray:
+  enabled: true
+
+spring:
+  application:
+    name: user-api
+
+  cloud:
+    nacos:
+      discovery:
+        namespace: 27af3a02-4f7a-499a-aac1-1d904a09594c
+        username: nacos
+        password: a123456
+        server-addr: http://127.0.0.1:8848
+      config:
+        server-addr: http://127.0.0.1:8848
+        username: nacos
+        password: a123456
+        namespace: 27af3a02-4f7a-499a-aac1-1d904a09594c
+        file-extension: properties
+#        shared-configs:
+#          - data-id: common-config.yaml
+#            refresh: true
+        group: DEFAULT_GROUP
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 50000 # 单位毫秒
+        readTimeout: 100000
