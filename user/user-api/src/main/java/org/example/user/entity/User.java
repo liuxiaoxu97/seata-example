@@ -2,6 +2,8 @@ package org.example.user.entity;
 
 import lombok.Data;
 
+import javax.persistence.*;
+
 /**
  *
  * 用户
@@ -17,6 +19,7 @@ public class User {
      * id
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     /**
      * 姓名

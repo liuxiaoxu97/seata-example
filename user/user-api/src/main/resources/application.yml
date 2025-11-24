@@ -1,30 +1,52 @@
 server:
   port: 7101
 
-gray:
-  enabled: true
-
 spring:
   application:
     name: user-api
 
-  cloud:
-    nacos:
-      discovery:
-        namespace: 27af3a02-4f7a-499a-aac1-1d904a09594c
-        username: nacos
-        password: a123456
-        server-addr: http://127.0.0.1:8848
-      config:
-        server-addr: http://127.0.0.1:8848
-        username: nacos
-        password: a123456
-        namespace: 27af3a02-4f7a-499a-aac1-1d904a09594c
-        file-extension: properties
-#        shared-configs:
-#          - data-id: common-config.yaml
-#            refresh: true
-        group: DEFAULT_GROUP
+  datasource:
+    url: jdbc:mysql://localhost:3306/seata_user?useSSL=false&serverTimeZone=UTC&characterEncoding=utf8
+    username: root
+    password: a123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接池配置
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      # 启动时如何处理数据库表
+      # validate: 验证表结构，不改变数据库
+      # update: 更新表结构，如果有变化
+      # create: 每次启动删除表并重新创建
+      # create-drop: 启动创建，关闭时删除
+      ddl-auto: update
+
+    # 是否显示 SQL 语句（开发时建议开启）
+    show-sql: true
+
+    # 格式化显示的 SQL 其他属性配置
+    properties:
+      hibernate:
+        # 格式化 SQL 语句
+        format_sql: true
+        # 使用新的 ID 生成器
+        id.new_generator_mappings: true
+        # 方言设置
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        # 批量操作大小
+        jdbc.batch_size: 20
+        # 排序批次大小
+        order_inserts: true
+        order_updates: true
+
+    # 是否开启 JPA 仓库
+    open-in-view: false
 
 feign:
   client:
