@@ -1,0 +1,6 @@
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-api/src/main/java/org/example/order/api/OrderApi.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-api/src/main/java/org/example/order/entity/Account.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-api/src/main/java/org/example/order/repository/AccountRepository.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-api/src/main/java/org/example/order/server/impl/OrderServiceImpl.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-api/src/main/java/org/example/order/server/OrderService.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-api/src/main/java/org/example/OrderApiApplication.java

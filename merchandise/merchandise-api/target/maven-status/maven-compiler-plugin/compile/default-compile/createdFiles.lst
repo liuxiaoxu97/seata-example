@@ -1,0 +1,8 @@
+org/example/merchandise/server/MerchandiseService.class
+org/example/merchandise/config/MybatisPlusConfig.class
+org/example/merchandise/server/impl/MerchandiseServiceImpl.class
+org/example/merchandise/config/MybatisPlusConfig$1.class
+MerchandiseApiApplication.class
+org/example/merchandise/entity/Merchandise.class
+org/example/merchandise/api/MerchandiseApi.class
+org/example/merchandise/mapper/MerchandiseMapper.class
