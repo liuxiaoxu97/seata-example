@@ -1,13 +1,10 @@
 package org.example.user.server.impl;
 
-import com.querydsl.jpa.impl.JPAQueryFactory;
-import lombok.RequiredArgsConstructor;
 import org.example.feign.params.UpdateUserDataParam;
-import org.example.user.entity.User;
+import org.example.user.entity.UserEntity;
 import org.example.user.repository.UserRepository;
 import org.example.user.server.UserServer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.query.JpaQueryCreator;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,11 +13,10 @@ import org.springframework.stereotype.Service;
  * @author LXZ 2025/11/24 15:46
  */
 @Service
-@RequiredArgsConstructor
 public class UserServerImpl implements UserServer {
 
-    private final JPAQueryFactory jpaQueryFactory;
-    private final UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository;
 
     /**
      * 更新用户信息
@@ -29,7 +25,7 @@ public class UserServerImpl implements UserServer {
      */
     @Override
     public Boolean updateUser(UpdateUserDataParam updateUserDataParam) {
-        User user = new User();
+        UserEntity user = new UserEntity();
         user.setAge(20);
         user.setName("你好");
         user.setScore(100);

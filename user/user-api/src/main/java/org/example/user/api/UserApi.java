@@ -5,7 +5,9 @@ import org.example.feign.params.UpdateUserDataParam;
 import org.example.response.ResponseModel;
 import org.example.user.server.UserServer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author LXZ 2025/11/24 15:28
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/u")
 public class UserApi implements UserApiFeign {
 
     @Autowired
@@ -27,8 +29,9 @@ public class UserApi implements UserApiFeign {
      * @param updateUserDataParam 更新用户信息参数
      */
     @Override
-    @RequestMapping("/update")
-    public ResponseModel<Boolean> updateUser(UpdateUserDataParam updateUserDataParam) {
-        return null;
+    @RequestMapping(value = "/update" , method = RequestMethod.POST)
+    public ResponseModel<Boolean> updateUser(@RequestBody UpdateUserDataParam updateUserDataParam) {
+        userServer.updateUser(updateUserDataParam);
+        return ResponseModel.success(true);
     }
 }

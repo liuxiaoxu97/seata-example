@@ -6,14 +6,13 @@ import javax.persistence.*;
 
 /**
  *
- * 用户
  *
- * @author LXZ 2025/11/24 15:38
+ * @author LXZ 2025/11/25 10:47
  */
 @Data
 @Entity
 @Table(name = "user")
-public class User {
+public class UserEntity {
 
     /**
      * id
