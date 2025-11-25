@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author LXZ 2024/11/19 15:54
  */
-@FeignClient(value = "order-api" , contextId = "OrderApiFeign", path = "/order/")
+@FeignClient(name = "order-service" , url = "http://localhost:7102")
 public interface OrderApiFeign {
 
     /**

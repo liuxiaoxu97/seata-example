@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @author LXZ 2025/11/24 17:16
  */
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/o")
 public class OrderApi implements OrderApiFeign {
 
     @Autowired
@@ -26,7 +26,7 @@ public class OrderApi implements OrderApiFeign {
      * @param param 下单参数
      */
     @Override
-    @RequestMapping(consumes = "/submit", method = RequestMethod.POST)
+    @RequestMapping(value = "/submit", method = RequestMethod.POST)
     public ResponseModel<Boolean> submit(@RequestBody SubmitParam param) {
         orderService.submit(param);
         return ResponseModel.success(true);

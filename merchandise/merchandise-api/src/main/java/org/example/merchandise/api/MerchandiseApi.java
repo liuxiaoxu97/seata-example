@@ -1,8 +1,10 @@
 package org.example.merchandise.api;
 
 import org.example.fegin.MerchandiseFeign;
+import org.example.merchandise.server.MerchandiseService;
 import org.example.params.ReduceParam;
 import org.example.response.ResponseModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("merchandise")
 public class MerchandiseApi implements MerchandiseFeign {
 
+    @Autowired
+    MerchandiseService merchandiseService;
+
     /**
      * 减少库存接口
      *
@@ -25,6 +30,6 @@ public class MerchandiseApi implements MerchandiseFeign {
     @Override
     @RequestMapping(value = "/reduce" , method = RequestMethod.POST)
     public ResponseModel<Boolean> reduce(@RequestBody ReduceParam reduceParam) {
-        return null;
+        return ResponseModel.success(merchandiseService.reduce(reduceParam));
     }
 }

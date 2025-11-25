@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author LXZ 2025/11/24 17:31
  */
-@FeignClient(value = "merchandise-api" , contextId = "MerchandiseApiFeign", path = "/merchandise/")
+@FeignClient(value = "merchandise-service" , url = "http://localhost:7103")
 public interface MerchandiseFeign {
 
 

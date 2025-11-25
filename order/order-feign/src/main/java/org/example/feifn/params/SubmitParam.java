@@ -12,11 +12,11 @@ import lombok.Data;
 public class SubmitParam {
 
     /**
-     * 订单号
+     * 账户号
      */
-    private String orderNo;
+    private String accountNo;
     /**
      * 订单金额
      */
-    private Integer account;
+    private Integer money;
 }
