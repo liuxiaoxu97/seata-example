@@ -1,2 +1,2 @@
-org/example/feifn/params/SubmitParam.class
-org/example/feifn/OrderApiFeign.class
+org/example/feign/OrderApiFeign.class
+org/example/feign/params/SubmitParam.class

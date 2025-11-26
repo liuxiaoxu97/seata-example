@@ -1,6 +1,5 @@
 server:
   port: 7103
-
   servlet:
     context-path: /api/m
 

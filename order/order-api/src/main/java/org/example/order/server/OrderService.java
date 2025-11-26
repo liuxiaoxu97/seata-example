@@ -1,10 +1,6 @@
 package org.example.order.server;
 
-import org.example.feifn.params.SubmitParam;
-import org.example.response.ResponseModel;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.example.feign.params.SubmitParam;
 
 /**
  *

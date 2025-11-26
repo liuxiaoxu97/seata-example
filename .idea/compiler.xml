@@ -30,7 +30,7 @@
       <module name="order-feign" options="-parameters" />
       <module name="platform-api" options="-parameters" />
       <module name="seata-server" options="-parameters" />
-      <module name="user" options="" />
+      <module name="user" options="-parameters" />
       <module name="user-api" options="-parameters" />
       <module name="user-feign" options="-parameters" />
     </option>

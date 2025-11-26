@@ -1,6 +1,6 @@
 package org.example.merchandise.api;
 
-import org.example.fegin.MerchandiseFeign;
+import org.example.feign.MerchandiseFeign;
 import org.example.merchandise.server.MerchandiseService;
 import org.example.params.ReduceParam;
 import org.example.response.ResponseModel;

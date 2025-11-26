@@ -6,6 +6,7 @@ import org.example.user.repository.UserRepository;
 import org.example.user.server.UserServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 /**
  *
@@ -25,10 +26,14 @@ public class UserServerImpl implements UserServer {
      */
     @Override
     public Boolean updateUser(UpdateUserDataParam updateUserDataParam) {
-        UserEntity user = new UserEntity();
-        user.setAge(20);
-        user.setName("你好");
-        user.setScore(100);
+        UserEntity user = userRepository.findById(updateUserDataParam.getUserId()).orElse(null);
+        if (ObjectUtils.isEmpty(user)) {
+            user = new UserEntity();
+            user.setAge(20);
+            user.setName("你好");
+            user.setScore(100);
+        }
+        user.setScore(user.getScore() + updateUserDataParam.getScore());
         userRepository.save(user);
         return true;
     }

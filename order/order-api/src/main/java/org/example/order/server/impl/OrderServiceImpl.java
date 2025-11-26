@@ -1,7 +1,7 @@
 package org.example.order.server.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.example.feifn.params.SubmitParam;
+import org.example.feign.params.SubmitParam;
 import org.example.order.entity.Account;
 import org.example.order.repository.AccountRepository;
 import org.example.order.server.OrderService;

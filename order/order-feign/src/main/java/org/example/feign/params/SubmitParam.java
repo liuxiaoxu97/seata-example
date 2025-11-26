@@ -1,4 +1,4 @@
-package org.example.feifn.params;
+package org.example.feign.params;
 
 import lombok.Data;
 

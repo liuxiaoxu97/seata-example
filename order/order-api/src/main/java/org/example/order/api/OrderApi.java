@@ -1,7 +1,7 @@
 package org.example.order.api;
 
-import org.example.feifn.OrderApiFeign;
-import org.example.feifn.params.SubmitParam;
+import org.example.feign.OrderApiFeign;
+import org.example.feign.params.SubmitParam;
 import org.example.order.server.OrderService;
 import org.example.response.ResponseModel;
 import org.springframework.beans.factory.annotation.Autowired;

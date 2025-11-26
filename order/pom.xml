@@ -11,6 +11,8 @@
 
     <artifactId>order</artifactId>
     <packaging>pom</packaging>
+    <version>1.0</version>
+
     <modules>
         <module>order-api</module>
         <module>order-feign</module>

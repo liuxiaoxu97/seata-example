@@ -1,2 +1,2 @@
-/Users/liuxuzhao/Desktop/seata/seata-example/order/order-feign/src/main/java/org/example/feifn/OrderApiFeign.java
-/Users/liuxuzhao/Desktop/seata/seata-example/order/order-feign/src/main/java/org/example/feifn/params/SubmitParam.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-feign/src/main/java/org/example/feign/params/SubmitParam.java
+/Users/liuxuzhao/Desktop/seata/seata-example/order/order-feign/src/main/java/org/example/feign/OrderApiFeign.java
