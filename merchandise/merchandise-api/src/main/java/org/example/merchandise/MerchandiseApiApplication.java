@@ -12,7 +12,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author LXZ 2025/11/24 14:57
  */
 @SpringBootApplication
-@EnableFeignClients
 @EnableDiscoveryClient
 public class MerchandiseApiApplication {
     public static void main(String[] args) {

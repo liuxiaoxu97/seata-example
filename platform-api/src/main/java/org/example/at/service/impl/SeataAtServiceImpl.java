@@ -1,5 +1,6 @@
 package org.example.at.service.impl;
 
+import io.seata.spring.annotation.GlobalTransactional;
 import org.example.at.params.AtParam;
 import org.example.at.service.SeataAtService;
 import org.example.feign.MerchandiseFeign;
@@ -30,6 +31,7 @@ public class SeataAtServiceImpl implements SeataAtService {
      * 模拟下单接口
      */
     @Override
+    @GlobalTransactional
     public Boolean atOrder(AtParam atParam) {
 
         // 1. 付钱
@@ -47,6 +49,11 @@ public class SeataAtServiceImpl implements SeataAtService {
         updateUserDataParam.setUserId(1L);
         updateUserDataParam.setScore(atParam.getScore());
         userApiFeign.updateUser(updateUserDataParam);
+
+
+        if (1 == 1) {
+            throw new RuntimeException("模拟异常");
+        }
         return true;
     }
 }

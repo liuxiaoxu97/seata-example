@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author LXZ 2025/11/24 17:31
  */
-@FeignClient(value = "merchandise-service" , url = "${feign.client.merchandise-service.url}")
+//@FeignClient(value = "merchandise-service" , url = "${feign.client.merchandise-service.url}")
+@FeignClient(value = "merchandise-api" , contextId = "MerchandiseFeign", path = "api/m/merchandise")
 public interface MerchandiseFeign {
 
 
@@ -20,7 +21,7 @@ public interface MerchandiseFeign {
      *
      * 减少库存接口
      */
-    @RequestMapping(value = "/merchandise/reduce" , method = RequestMethod.POST)
+    @RequestMapping(value = "/reduce" , method = RequestMethod.POST)
     ResponseModel<Boolean> reduce(@RequestBody ReduceParam reduceParam) ;
 
 

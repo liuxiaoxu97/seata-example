@@ -7,6 +7,25 @@ spring:
   application:
     name: order-api
 
+  cloud:
+    nacos:
+      discovery:
+        namespace: a23ff674-556f-42f5-a909-e79a517f8606
+        username: nacos
+        password: a123456
+        server-addr: http://127.0.0.1:8848
+      config:
+        server-addr: http://127.0.0.1:8848
+        username: nacos
+        password: a123456
+        namespace: a23ff674-556f-42f5-a909-e79a517f8606
+        file-extension: properties
+        group: DEFAULT_GROUP
+  config:
+    import:
+      - "nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}"
+
+
   datasource:
     url: jdbc:mysql://localhost:33061/seata_order?useSSL=false&serverTimeZone=UTC&characterEncoding=utf8
     username: root
@@ -56,3 +75,20 @@ feign:
       default:
         connectTimeout: 50000 # 单位毫秒
         readTimeout: 100000
+
+seata:
+  # 数据源代理模式
+  data-source-proxy-mode: AT
+  registry:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      namespace: a23ff674-556f-42f5-a909-e79a517f8606
+      username: nacos
+      password: a123456
+      group: SEATA_GROUP
+      application-name: seata-server
+    type: nacos
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+  tx-service-group: default_tx_group

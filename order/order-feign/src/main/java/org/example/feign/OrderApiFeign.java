@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author LXZ 2024/11/19 15:54
  */
-@FeignClient(name = "order-service" , url = "${feign.client.order-service.url}")
+//@FeignClient(name = "order-service" , url = "${feign.client.order-service.url}")
+@FeignClient(value = "order-api" , contextId = "OrderApiFeign", path = "/api/order/o")
 public interface OrderApiFeign {
 
     /**
      * 下单接口
      */
-    @RequestMapping(value = "/o/submit" , method = RequestMethod.POST)
+    @RequestMapping(value = "/submit" , method = RequestMethod.POST)
     ResponseModel<Boolean> submit(@RequestBody SubmitParam submitParam) ;
 
 }

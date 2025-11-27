@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * @author LXZ 2024/11/19 15:54
  */
-@FeignClient(name = "user-service" , url = "${feign.client.user-service.url}")
+@FeignClient(value = "user-api" , contextId = "UserApiFeign", path = "/api/user/u")
 public interface UserApiFeign {
 
 
     /**
      * 更新用户信息
      */
-    @RequestMapping(value = "/u/update" , method = RequestMethod.POST)
+    @RequestMapping(value = "/update" , method = RequestMethod.POST)
     ResponseModel<Boolean> updateUser(@RequestBody UpdateUserDataParam updateUserDataParam) ;
 
 }

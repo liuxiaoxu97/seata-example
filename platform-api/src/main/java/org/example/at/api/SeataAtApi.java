@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author LXZ 2025/11/25 16:57
  */
 @RestController
-@RequestMapping("/api/seata")
+@RequestMapping("/seata")
 public class SeataAtApi {
 
 
