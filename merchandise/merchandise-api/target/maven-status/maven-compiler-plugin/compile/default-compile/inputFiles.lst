@@ -1,7 +1,9 @@
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/entity/Merchandise.java
+/Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/server/impl/TccMerchandiseServiceImpl.java
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/server/MerchandiseService.java
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/mapper/MerchandiseMapper.java
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/api/MerchandiseApi.java
+/Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/server/TccMerchandiseService.java
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/server/impl/MerchandiseServiceImpl.java
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/config/MybatisPlusConfig.java
 /Users/liuxuzhao/Desktop/seata/seata-example/merchandise/merchandise-api/src/main/java/org/example/merchandise/MerchandiseApiApplication.java

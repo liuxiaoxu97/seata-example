@@ -33,4 +33,14 @@ public class SeataAtApi {
     public ResponseModel<Boolean> atOrder(@RequestBody AtParam atParam) {
         return ResponseModel.success(seataAtService.atOrder(atParam));
     }
+
+    /**
+     * 下单
+     *
+     * @param atParam 下单参数
+     */
+    @RequestMapping(value = "/tcc" , method = RequestMethod.POST)
+    public ResponseModel<Boolean> tccOrder(@RequestBody AtParam atParam) {
+        return ResponseModel.success(seataAtService.tccOrder(atParam));
+    }
 }

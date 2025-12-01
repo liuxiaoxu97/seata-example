@@ -15,10 +15,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface SeataAtService {
 
     /**
-     * 模拟下单接口
+     * at模拟下单接口
      *
      * @param  atParam 订单参数
      * @return 订单是否成功
      */
     Boolean atOrder(AtParam atParam);
+
+    /**
+     * tcc模拟下单接口
+     *
+     * @param  atParam 订单参数
+     * @return 订单是否成功
+     */
+    Boolean tccOrder(AtParam atParam);
 }

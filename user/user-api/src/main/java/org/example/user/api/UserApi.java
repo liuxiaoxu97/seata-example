@@ -3,7 +3,7 @@ package org.example.user.api;
 import org.example.feign.UserApiFeign;
 import org.example.feign.params.UpdateUserDataParam;
 import org.example.response.ResponseModel;
-import org.example.user.server.UserServer;
+import org.example.user.server.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserApi implements UserApiFeign {
 
     @Autowired
-    private UserServer userServer;
+    private UserService userService;
 
     /**
      * 更新用户信息
@@ -31,7 +31,7 @@ public class UserApi implements UserApiFeign {
     @Override
     @RequestMapping(value = "/update" , method = RequestMethod.POST)
     public ResponseModel<Boolean> updateUser(@RequestBody UpdateUserDataParam updateUserDataParam) {
-        userServer.updateUser(updateUserDataParam);
+        userService.updateUser(updateUserDataParam);
         return ResponseModel.success(true);
     }
 }

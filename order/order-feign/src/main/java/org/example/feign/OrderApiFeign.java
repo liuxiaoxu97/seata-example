@@ -13,9 +13,17 @@ import org.springframework.web.bind.annotation.*;
 public interface OrderApiFeign {
 
     /**
-     * 下单接口
+     * 下单接口 AT模式
      */
     @RequestMapping(value = "/submit" , method = RequestMethod.POST)
     ResponseModel<Boolean> submit(@RequestBody SubmitParam submitParam) ;
+
+
+    /**
+     * 下单接口 TCC模式
+     */
+    @RequestMapping(value = "/submit/tcc" , method = RequestMethod.POST)
+    ResponseModel<Boolean> submitTcc(@RequestBody SubmitParam submitParam) ;
+
 
 }

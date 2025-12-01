@@ -1,6 +1,6 @@
 org/example/user/repository/UserRepository.class
 org/example/UserApiApplication.class
 org/example/user/entity/UserEntity.class
+org/example/user/server/impl/UserServiceImpl.class
 org/example/user/api/UserApi.class
-org/example/user/server/impl/UserServerImpl.class
-org/example/user/server/UserServer.class
+org/example/user/server/UserService.class

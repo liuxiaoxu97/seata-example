@@ -1,6 +1,8 @@
+org/example/order/server/TccOrderService.class
 org/example/order/entity/Account.class
 org/example/order/server/OrderService.class
 org/example/OrderApiApplication.class
 org/example/order/repository/AccountRepository.class
 org/example/order/api/OrderApi.class
+org/example/order/server/impl/TccOrderServiceImpl.class
 org/example/order/server/impl/OrderServiceImpl.class

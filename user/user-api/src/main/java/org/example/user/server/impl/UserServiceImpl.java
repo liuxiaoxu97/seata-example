@@ -3,7 +3,7 @@ package org.example.user.server.impl;
 import org.example.feign.params.UpdateUserDataParam;
 import org.example.user.entity.UserEntity;
 import org.example.user.repository.UserRepository;
-import org.example.user.server.UserServer;
+import org.example.user.server.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
@@ -14,7 +14,7 @@ import org.springframework.util.ObjectUtils;
  * @author LXZ 2025/11/24 15:46
  */
 @Service
-public class UserServerImpl implements UserServer {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;

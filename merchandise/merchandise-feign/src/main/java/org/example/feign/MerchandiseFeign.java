@@ -25,4 +25,10 @@ public interface MerchandiseFeign {
     ResponseModel<Boolean> reduce(@RequestBody ReduceParam reduceParam) ;
 
 
+    /**
+     *
+     * 减少库存接口
+     */
+    @RequestMapping(value = "/reduce/tcc" , method = RequestMethod.POST)
+    ResponseModel<Boolean> reduceTcc(@RequestBody ReduceParam reduceParam) ;
 }
